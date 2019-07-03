@@ -1,0 +1,5 @@
+// Comando para rodar o webpack
+// npx webpack
+
+// Comando para compilar o sass
+// sass --watch dist/style/sass/style.scss:dist/style/css/style.css --style compressed
