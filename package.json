@@ -1,14 +1,14 @@
 {
   "name": "site-de-imagens",
   "version": "1.0.0",
-  "description": "",
+  "description": "Site de pesquisa de imagens, vetores e vídeos.",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ricardo",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -18,6 +18,16 @@
     "webpack-cli": "^3.3.5"
   },
   "dependencies": {
+    "jquery": "^3.4.1",
     "lodash": "^4.17.11"
-  }
+  },
+  "main": "webpack.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricardogitsouto/imgBox-buscar-imagens.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ricardogitsouto/imgBox-buscar-imagens/issues"
+  },
+  "homepage": "https://github.com/Ricardogitsouto/imgBox-buscar-imagens#readme"
 }

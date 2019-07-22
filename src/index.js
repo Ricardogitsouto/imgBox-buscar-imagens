@@ -1,6 +1,6 @@
 import _ from 'lodash';
-import { soma } from './myModule'
+// import { tipoBusca } from './tipoBusca'
+import { eventosBusca } from './eventosBusca';
+eventosBusca()
 
-let result = soma(100,10)
-
-console.log(result);
+// tipoBusca()

@@ -4,10 +4,15 @@
     border: 0;
     margin: 0;
 }
+html,body{
+    height: 100%;
+}
+@import './styleSectionImagens.scss';
+@import './styleVideos.scss';
 @import url('https://fonts.googleapis.com/css?family=Yesteryear&display=swap');
-
 @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap');
 @import url('https://fonts.googleapis.com/css?family=DM+Sans&display=swap');
+
 // Variaveis------------------------
 $preto-padrao: #000;
 $cor-green: #02a388;
@@ -40,249 +45,167 @@ $cor-paragrafo:#696969;
     background-size: cover;
     background-position: center;
 }
-html,body{
-    height: 100%;
-}
-
-        header{
-            height: 120%;
-            background: url(../../imgs/cidade-header.jpg) no-repeat;
-            background-position: 100% 100%;
-            background-size: cover;
-            background-attachment: fixed;
-            position: relative;
-
-            .tarja-topo{
-               display: grid;
-               grid-template-columns: auto auto auto;
-                // height: 90px;
-                background-color: $preto-padrao;
-                box-sizing: border-box;
-
-                .menu-left{
-                    margin: auto 10px;
-
-                    li{
-                        display: inline;
-                        margin: 0 10px;
-                        @extend %reset;
-                        a{
-                            color: #A9A9A9;
-                            font-size: 16px;
-                            font-family: $paragrafos;
-                            font-weight: bold;
-                            @extend %reset;
-                            
-                            &:hover{
-                                color: $cor-green;
-                            }
-                        }
-                    }
-                    
-                }
-                .logo{
-                    font-family: 'Yesteryear', cursive;
-                    font-size: 50px;
-                    text-align: center;
-                    color: #fff;
-                    padding: 5px;
-                    text-decoration: none;
-                }
-
-                .menu-right{
-                    text-align: right;
-                    margin: auto 10px;
-                    li{
-                        display: inline;
-                        margin: 0 10px;
-                        @extend %reset;
-                        a{
-                            color: #A9A9A9;
-                            font-size: 16px;
-                            font-family: $paragrafos;
-                            font-weight: bold;
-                            @extend %reset;
-                            
-                            &:hover{
-                                color: $cor-green;
-                            }
-                        }
-                    }
-                    
-                }
-                .icon-menu-responsivo{
-                    display: none;
-                    
-                    .icon{
-                        font-size: 30px;
-                    }
-                }
-                
-            }
-            //Caixa-menu responsivo que aparece ao passar o mouse no icon
-            .box-menu-responsivo{
-                width: 100%;
-                max-width: 400px;;
-                height: 100%;
-                right: 0;
-                position: fixed;
-                background-color: #000;
-                z-index: 20;
-                padding: 50px;
-                box-sizing: border-box;
-                display: none;
-
-                .menu-responsivo{
-                    li{
-                        list-style: none;
-                        text-align: center;
-                        padding: 20px 3%;
-
-                        a{
-                            color: #fff;
-                            font-size: 30px;
-                            text-decoration: none;
-                        }
-                    }
-                }
-            }
-
-            .campo-busca{
-                width: 70%;
-                height: 60px;
-                margin: 20% 15% 0 15%;
-                background-color: #fff;
-                // position: fixed;
-                display: grid;
-                grid-template-columns: 10% 70% 20%;
-                // display: none;
-                
-                
-                .lupa{
-                    width: 100%;
-                    height: 50px;
-                    padding: 10px 0px 0 10px;
-                    box-sizing: border-box;
-                    &:hover{
-                        cursor: pointer;
-                    }
-
-                    .icon-lupa{
-                        font-size: 40px;
-                        color: #4F4F4F;
-                    }
-                }
-                .imput-busca{
-                    width: 100%;
-                    height: 60px;
-                    box-sizing: border-box;
-                    font-size: 22px;
-                    overflow: hidden;
-
-                    box-shadow: 0 0 0 0;
-                    border: 0 none;
-                    outline: 0; 
-                }
-
-                .menu-busca{
-                    height: 60px;
-                    width: 100%;
-                    border-left: solid 1px #ccc;
-                    box-sizing: border-box;
-                    padding-top: 20px;
-                    z-index: 999;
-
-
-                    li{
-                        width: 100%;
-                        text-align: center;
-                        @extend %reset;
-
-                        a{
-                            font-size: 20px;
-                            color: #4F4F4F	;
-                            font-family: Arial, Helvetica, sans-serif;
-                            @extend %reset;
-    
-                            span{
-                                font-size: 17px;
-                                font-weight: 500;
-                            }
-                        }
-                    }
-                    
-                    
-
-                    & :hover > .sub-menu-busca{
-                        display: block;
-                    }
-
-                    .sub-menu-busca{
-                        width: 100%;
-                        display: none;
-                        margin-top: 20px;
-
-                        li{
-                            padding: 5px 0;
-                            box-sizing: border-box;
-                            text-align: center;
-                            background-color: #fff;
-                            border-bottom: 1px solid #4F4F4F;
-                            
-                        }
-                    }
-                }
-            }
-
-            .tarja-footer{
-                position: absolute;
-                text-align: center;
-                padding: 30px;
-                width: 100%;
-                bottom: 0;
-                background-color: rgba($color: #000000, $alpha: .7);
-                box-sizing: border-box;
-                z-index: 0;
-
-                h1{
-                    color: #fff;
-                    font-size: 30px;
-                    font-family: $paragrafos;
-                    margin: 0;
-                }
-            }
+    .bannerImgage{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 999;
+        background-color: rgba(0,0,0,.8);
+        display: none;
+        span{
+            font-size: 50px;
+            margin: 10px;
+            color: red;
+            cursor: pointer;
         }
-        // Fim do header
+        .img-banner{
+            width: 70%;
+            height: 70%;
+            top: 100px;
+            left: 15%;
+            position: absolute;
+        }
+    }
 
-        .box-imagens-retornadas-api{
+    .cabecario{
+        height: 100%;
+        box-sizing: border-box;
+        // background-image: url($background-image);
+        background: url('../../imgs/estilo-de-vida.jpg') no-repeat;
+        background-size: cover;
+        
+
+        .tarja-top-header{
             display: grid;
             grid-template-columns: auto auto auto;
-            padding: 5% 10%;
-            grid-gap: 10px;
-            // display: none;
+            background-color: #000;
 
-            .img-retornada-api{
-                height: 300px;
-                border: solid;
-                background: url(../../imgs/running.jpg) no-repeat;
-                background-size: cover;
-                position: relative;
+            .menu-left{
+                margin: auto 10px;
 
-                .tarja-footer-img-api{
-                    width: 100%;
-                    position: absolute;
-                    padding: 10px;
-                    background-color: rgba($color: #000000, $alpha: .7);
-                    bottom: 0;
+                li{
+                    display: inline;
+                    margin: 0 10px;
+                    @extend %reset;
+                    a{
+                        color: #A9A9A9;
+                        font-size: 16px;
+                        font-family: $paragrafos;
+                        font-weight: bold;
+                        @extend %reset;
+                        
+                        &:hover{
+                            color: $cor-green;
+                        }
+                    }
+                }
+                
+            }
+            .logo{
+                font-family: 'Yesteryear', cursive;
+                font-size: 50px;
+                text-align: center;
+                color: #fff;
+                padding: 5px;
+                text-decoration: none;
+            }
 
-                    p{
-                        color: #fff;
-                        font-size: 22px;
+            .menu-right{
+                text-align: right;
+                margin: auto 10px;
+                li{
+                    display: inline;
+                    margin: 0 10px;
+                    @extend %reset;
+                    a{
+                        color: #A9A9A9;
+                        font-size: 16px;
+                        font-family: $paragrafos;
+                        font-weight: bold;
+                        @extend %reset;
+                        
+                        &:hover{
+                            color: $cor-green;
+                        }
+                    }
+                }
+                
+            }
+            .icon-menu-responsivo{
+                display: none;
+                text-align: right;
+                
+                
+                
+                .icon{
+                    
+                    font-size: 30px;
+                color: #fff;
+                    font-size: 42px;
+                    padding: 6% 15%;
+                    cursor: pointer;
+                }
+            }
+        }// fim da tarja-top header
+
+        .fomulario-busca{
+            width: 70%;
+            display: grid;
+            grid-template-columns: 15% auto 30%;
+            margin: 15% 15% 0 15%;
+            padding: 10px;
+            background-color: #fff;
+            position: relative;
+            transition: .5s;
+            border-bottom: 1px solid #ccc;
+            box-shadow: 0px 7px 9px 6px #696969;
+
+            .btn-busca{
+                background-color: #fff;
+                .icon{
+                    font-size: 45px;
+                        padding: 5% 20%;
+                    color: #696969;
+                }
+            }
+            .input-busca{
+                border-right: solid 3px #cccc;
+                outline: 0; 
+                    
+                    font-size: 20px;
+            }
+            .select-opcao{
+                text-align: center;
+                padding: 5% 20%;
+                outline: 0; 
+
+                option{
+                    
+                    span{
+                        padding: 5% 20%;
                     }
                 }
             }
+            
+        }//fim  do formulario de busca
 
+        .tarja-footer{
+            text-align: center;
+            padding: 30px;
+            width: 100%;
+            background-color: rgba($color: #000000, $alpha: .7);
+            box-sizing: border-box;
+            position:  absolute;
+            bottom: 0;
+
+            h1{
+                color: #fff;
+                font-size: 25px;
+                font-family: $paragrafos;
+                margin: 0;
+            }
         }
+    }//Fim do cabecario
 
         main{
             padding: 1px 10%;
@@ -367,13 +290,10 @@ html,body{
 
                         &:hover>img{
                             opacity: .5;
-                            transition: .5s;
-                            
+                            transition: .5s; 
                         }
-                        
-
-                        
                     }
+
                     .card-maior{
                         
                         img{
@@ -517,7 +437,7 @@ html,body{
             
         }//Fim do main
 
-        // tarja ancora para postfolio
+        // tarja ancora para portfolio
         .tarja-ancora-dev{
             background-color:rgba($color: #000000, $alpha: .8);
             text-align: center;
@@ -577,56 +497,23 @@ html,body{
 // Primeira consuta 1100px;
 
 @media only screen and (max-width: 1000px) {//Inicio media queriw 480px-------
-    header{//inicio do header
-       
-        .tarja-topo{
-            .logo{
-                width: 50%;
-                font-size: 50px;
-                text-align: left;
-                padding: 0 30px;
-            }
-        }
-
-        // height: 90%;
-        .campo-busca{
-            margin-top: 30%;
-            grid-template-columns: 20% 80%;
-
-            .imput-busca{
-                padding-right: 10px;
-            }
-            .menu-busca{
-                display: none;
-            }
-        }
-
-        .tarja-topo{
-            grid-template-columns: 70% 30%;
-            .menu-left{
-                display: none;
-            }
-            .menu-right{
-                display: none;
-            }
-            .icon-menu-responsivo{
-                display: block;
-                text-align: right;
+    
+    .cabecario{
+        background: green;
+                background-color: $preto-padrao;
                 box-sizing: border-box;
-                
-                .icon{
-                    padding: 20px 30px;
-                    font-size: 30px;
-                    color: #fff;
-
-                    &:hover{
-                        cursor: pointer;
-                    }
+            
+                .menu-left{
+                    display: none;
                 }
-            }
-        }
-    }//fin do header
+                .menu-right{
+                    display: none;
+                }
+                .icon-menu-responsivo{
+                    display: block;
+                }
 
+    }
     main{
         .apresentacao{
             .box-cards{
@@ -743,4 +630,3 @@ html,body{
     }//Fim do main
 
 }//Fim media queriw 480px----------------------------------------------------
-
